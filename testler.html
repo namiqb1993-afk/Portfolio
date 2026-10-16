@@ -1,58 +1,33 @@
 <!doctype html>
 <html lang="az">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Namiq Bağırlı — İngilis dili üzrə onlayn testlər: Vocabulary 5–11, A1–A2 Grammar, DİM sınaqları.">
+<meta name="description" content="Namiq Bağırlı — interaktiv ingilis dili testləri: lüğət, cümlə qurma və qrammatika sınaqları.">
 <meta name="theme-color" content="#111814">
-<title>İngilis dili testləri | Namiq Bağırlı</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="tests.css">
-<script src="vocab-bank.js" defer></script>
-<script src="tests.js" defer></script>
+<title>Testlər · Namiq Bağırlı</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#111814;--bg2:#19251c;--ink:#f1f4ec;--muted:#a4b0a5;--accent:#c9f48c;--line:#ffffff20;--font:Manrope,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 var(--font);overflow-x:hidden}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}button{font:inherit}body:before{content:"";position:absolute;pointer-events:none;z-index:-1;top:0;right:-20vw;width:85vw;height:700px;background:radial-gradient(circle at 50% 25%,#a2e46e13,transparent 60%)}
+.wrap{width:min(1160px,90%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:82px;border-bottom:1px solid var(--line)}header{border-bottom:1px solid var(--line);background:#111814e8}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:14px}.mark{height:43px;width:43px;display:grid;place-items:center;border:1px solid #ffffff36;border-radius:12px;font-size:22px;letter-spacing:-2px}.mark i{font-style:normal;color:var(--accent)}.brand small{display:block;font-weight:400;color:var(--muted);font-size:10px;line-height:1.6}.nav{display:flex;gap:28px;align-items:center;font-size:13px}.nav>a{color:var(--muted)}.nav>a:hover,.nav>a[aria-current]{color:var(--ink)}.nav>a[aria-current]{position:relative}.nav>a[aria-current]:after{content:'';position:absolute;bottom:-12px;left:calc(50% - 3px);width:5px;height:5px;background:var(--accent);border-radius:50%}
+main{padding-bottom:100px}.intro{padding:86px 0 52px;border-bottom:1px solid var(--line)}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.26em;color:var(--accent);text-transform:uppercase}.intro h1{font-size:clamp(38px,6.5vw,78px);line-height:1.15;letter-spacing:-.065em;font-weight:800;margin:23px 0}.intro h1 span{color:var(--accent)}.intro p.description{color:var(--muted);font-size:16px;max-width:680px;line-height:1.85;margin:18px 0 30px}.pillrow{display:flex;flex-wrap:wrap;gap:9px}.pill{border:1px solid #c9f48c40;color:#cce5bc;background:#c9f48c0a;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:600}
+.sectionlabel{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:40px 0 24px;display:flex;align-items:center;gap:10px}.sectionlabel strong{font-weight:800;color:var(--accent)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{min-height:400px;display:flex;flex-direction:column;gap:15px;padding:29px;background:linear-gradient(150deg,#1c2a20,#172019);border:1px solid var(--line);border-radius:20px;transition:transform .2s,border-color .2s,background .2s}.card:hover{transform:translateY(-5px);border-color:#c9f48c80}.number{display:flex;justify-content:space-between;gap:10px;color:#a6b4a6;font-size:11px}.number b{color:var(--accent);font-size:12px}.glyph{display:grid;place-items:center;height:64px;width:64px;border:1px solid #c9f48c30;background:#c9f48c0f;border-radius:17px;color:var(--accent);font-size:29px;font-weight:800}.card h2{font-size:25px;line-height:1.25;letter-spacing:-.045em;margin:6px 0 0}.card p{font-size:13px;color:var(--muted);line-height:1.85;margin:0}.features{font-size:11px;color:#c0d5b5;margin-top:0}.open{align-self:flex-start;margin-top:auto;border-radius:11px;background:var(--accent);color:#172116;padding:12px 20px;font-weight:800;font-size:12px}.card:hover .open{background:#defeaf}.note{margin-top:33px;padding:23px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:18px;color:var(--muted);font-size:12px;line-height:1.85}.note strong{color:var(--ink)}.foot{border-top:1px solid var(--line);padding:28px 0;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:12px}
+@media(max-width:880px){.cards{grid-template-columns:1fr}.card{min-height:0}.card p{max-width:600px}.intro{padding-top:70px}}
+@media(max-width:600px){.top{min-height:72px}.nav{gap:13px;font-size:11px}.brand small{display:none}.intro{padding:56px 0 40px}.intro h1{letter-spacing:-.055em}.intro p.description{font-size:14px}.card{padding:23px}.note{grid-template-columns:1fr}.foot{flex-direction:column}}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#testler">Məzmuna keç</a>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html#kitablar" aria-label="Ana səhifəyə qayıt"><span class="brand-mark">nb<span>.</span></span><span class="brand-name">Namiq Bağırlı<small>Tərcüməçi & müəllim</small></span></a>
-    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menyunu aç"><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Əsas menyu">
-      <a class="nav-link" href="index.html#kitablar">Kitablar</a><a class="nav-link" href="index.html#dersler">Dərslər</a><a class="nav-link active" aria-current="page" href="testler.html">Testlər</a><a class="header-contact" href="https://wa.me/994506097097" target="_blank" rel="noopener noreferrer">Əlaqə ↗</a>
-    </nav>
-  </div>
-</header>
-<main id="testler" class="container">
-  <section class="intro" id="intro">
-    <div class="intro-copy"><p class="eyebrow"><span class="dot"></span> İNTERAKTİV ÖYRƏNMƏ PLATFORMASI</p><h1>Öyrən. Sına. <em>İnkişaf et.</em></h1><p class="lead">Söz ehtiyatını genişləndir, qrammatikanı möhkəmləndir və buraxılış imtahanına hazırlaş. Hər dəfə fərqli tapşırıqlar səni gözləyir.</p><div class="intro-stats"><span><strong>3</strong> test sistemi</span><span><strong>5–11</strong> siniflər</span><span><strong id="bank-count">4000+</strong> lüğət sözü</span></div></div>
-    <div class="intro-aside" aria-hidden="true"><div class="score-ring"><span>EN</span><span class="arrow">↗</span><strong>AZ</strong></div><span class="aside-caption">PRACTICE MAKES PROGRESS · 2026</span></div>
-  </section>
-  <section class="select-zone" id="selection" aria-labelledby="section-heading">
-    <div class="section-label">01 / İSTİQAMƏT SEÇİN</div><h2 id="section-heading">Hansı testə başlayaq?</h2>
-    <div class="test-grid">
-      <button type="button" class="test-card" data-type="vocab"><span class="card-top"><span class="card-index">01</span><span class="card-arrow">↗</span></span><span class="card-icon" aria-hidden="true">Aa</span><strong>Vocabulary<br>Tests</strong><span class="card-desc">5–11-ci siniflər üzrə sinonim, antonim, tərif, tərcümə və cümlə tamamlama.</span><span class="card-tag">5–11-ci sinif · 10 sual</span></button>
-      <button type="button" class="test-card" data-type="grammar"><span class="card-top"><span class="card-index">02</span><span class="card-arrow">↗</span></span><span class="card-icon" aria-hidden="true">S+V</span><strong>Grammar &<br>Sentence Building</strong><span class="card-desc">A1–A2 səviyyəsində açıq cavablı cümlə qurma və qrammatika çalışmaları.</span><span class="card-tag">A1–A2 · 10 yazılı sual</span></button>
-      <button type="button" class="test-card" data-type="dim"><span class="card-top"><span class="card-index">03</span><span class="card-arrow">↗</span></span><span class="card-icon" aria-hidden="true">26<span class="tiny">/100</span></span><strong>DİM English<br>Exam</strong><span class="card-desc">Qrammatika, dinləmə, oxu və esse bölmələri ilə sınaq modeli.</span><span class="card-tag">11-ci sinif · 26 tapşırıq</span></button>
-    </div>
-    <p class="demo-note">DİM modulu rəsmi imtahan deyil. Dinləmə hissəsində hazırda brauzerin sintez edilmiş səsindən istifadə olunur; esse müəllim tərəfindən yoxlanılmalıdır.</p>
-  </section>
-  <section class="setup-zone hidden" id="setup-zone" aria-labelledby="setup-heading">
-    <div class="section-label">02 / ŞAGİRD MƏLUMATLARI</div><div class="heading-line"><div><p class="eyebrow" id="setup-type">VOCABULARY TESTS</p><h2 id="setup-heading">Sınağa hazırlaş</h2></div><button class="text-button" type="button" id="back-to-types">← Test seçiminə qayıt</button></div>
-    <form id="setup-form" class="setup-form">
-      <div class="form-grid"><label>Ad <span class="required">*</span><input id="first-name" name="firstName" required autocomplete="given-name" maxlength="70" placeholder="Adınızı yazın"></label><label>Soyad <span class="required">*</span><input id="last-name" name="lastName" required autocomplete="family-name" maxlength="70" placeholder="Soyadınızı yazın"></label><label>Sinif <span class="optional">(istəyə bağlı)</span><input id="student-class" name="class" maxlength="25" placeholder="Məsələn, 7A"></label><label>Məktəb <span class="optional">(istəyə bağlı)</span><input id="student-school" name="school" maxlength="100" placeholder="Məktəbin adı"></label></div>
-      <div class="options-row" id="vocab-options"><label>Sinfi seçin<select id="grade-select" name="grade"><option value="5">5-ci sinif</option><option value="6">6-cı sinif</option><option value="7">7-ci sinif</option><option value="8">8-ci sinif</option><option value="9">9-cu sinif</option><option value="10">10-cu sinif</option><option value="11">11-ci sinif</option></select></label><label>Tapşırıq növü<select id="vocab-mode" name="mode"><option value="mixed">Qarışıq test</option><option value="translation">Tərcümə</option><option value="definition">Definition matching</option><option value="synonym">Sinonim</option><option value="antonym">Antonim</option><option value="fill">Boşluğu doldur</option></select></label></div>
-      <div class="options-row hidden" id="grammar-options"><label>Çətinlik səviyyəsi<select id="grammar-level" name="level"><option value="A1">A1 – Başlanğıc</option><option value="A2">A2 – Elementar</option><option value="mixed">A1 + A2 qarışıq</option></select></label></div>
-      <p class="privacy-info">Ad və nəticə hazırkı versiyada yalnız bu brauzerdə saxlanır. Müəllimə avtomatik göndərilmə hələ aktiv deyil.</p><button class="primary-button" type="submit">Testə başla <span>↗</span></button>
-    </form>
-  </section>
-  <section class="quiz-zone hidden" id="quiz-zone" aria-labelledby="quiz-heading">
-    <div class="quiz-top"><button class="text-button" type="button" id="quit-quiz">← Testdən çıx</button><div class="quiz-meta"><span id="quiz-category">Vocabulary</span><span id="quiz-count">1 / 10</span></div></div>
-    <div class="progress-track" aria-label="Testin irəliləyişi"><div id="quiz-progress"></div></div>
-    <article class="question-card"><p class="eyebrow" id="question-tag">SUAL 01</p><h2 id="quiz-heading">Sual</h2><p id="question-help" class="question-help"></p><div id="question-extra" class="question-extra"></div><div id="question-answers" class="question-answers"></div></article>
-    <div class="quiz-actions"><button type="button" class="secondary-button" id="prev-question">← Əvvəlki</button><button type="button" class="primary-button" id="next-question">Növbəti <span>→</span></button></div>
-  </section>
-  <section class="result-zone hidden" id="result-zone" aria-labelledby="result-heading"><div class="section-label">03 / NƏTİCƏ</div><div class="result-card"><p class="eyebrow">TEST TAMAMLANDI</p><h2 id="result-heading">Əla iş!</h2><p id="result-subtitle"></p><div class="result-score"><strong id="result-points">0 / 10</strong><span id="result-percent">0%</span></div><p id="essay-notice" class="essay-notice hidden"></p><div id="result-review" class="review-list"></div><div class="result-actions"><button id="download-result" class="secondary-button" type="button">Nəticəni CSV kimi saxla ↓</button><button id="retry-test" class="primary-button" type="button">Yeni testə başla ↗</button></div></div></section>
-</main>
-<footer><div class="container footer-inner"><strong>Namiq Bağırlı</strong><span>© <span id="year"></span> · İngilis dili test platforması</span><a href="index.html">Ana səhifəyə qayıt ↑</a></div></footer>
-</body>
-</html>
+<header><div class="wrap top"><a class="brand" href="/"><span class="mark">nb<i>.</i></span><span>Namiq Bağırlı<small>Tərcüməçi &amp; müəllim</small></span></a><nav class="nav" aria-label="Əsas menyu"><a href="/#kitablar">Kitablar</a><a href="/#dersler">Dərslər</a><a href="/testler" aria-current="page">Testlər</a></nav></div></header>
+<main class="wrap"><section class="intro"><div class="eyebrow">Namiq Bağırlı · English learning</div><h1>Biliyini sına.<br><span>Hər gün bir addım irəli.</span></h1><p class="description">Şəxsi hazırlanmış sual bankları əsasında ingilis dilini öyrən, məşq et və nəticəni dərhal gör. Bir test sistemi seçərək başla.</p><div class="pillrow"><span class="pill">03 test sistemi</span><span class="pill">Mobil telefonda işləyir</span><span class="pill">Nəticə müəllimə göndərilir*</span></div></section>
+<div class="sectionlabel"><strong>01</strong> TEST KATEQORİYALARI</div>
+<section class="cards" aria-label="Test kateqoriyaları">
+<article class="card"><div class="number"><span>A1–A2 · YAZILI CAVABLAR</span><b>01 / 03</b></div><div class="glyph" aria-hidden="true">Aa</div><h2>Sentence Academy</h2><p>Cümlə qurma, söz sırasını düzəltmə, sual və inkar cümlələri, tərcümə və səhvləri düzəltmə.</p><div class="features">1 270 suallıq bank · 8 çalışma kateqoriyası</div><a class="open" href="/testler-cumle">Məşqə başla ↗</a></article>
+<article class="card"><div class="number"><span>QRAMMATİKA · SINAQ</span><b>02 / 03</b></div><div class="glyph" aria-hidden="true">✓</div><h2>Qrammatika Sınağı</h2><p>Mövzular üzrə qarışıq qrammatika sualları. Cavablarını yoxla, izahları oxu və nəticəni gör.</p><div class="features">30 sual · Mövzu üzrə seçmə</div><a class="open" href="/testler-qrammatika">Sınağa başla ↗</a></article>
+<article class="card"><div class="number"><span>ENGLISH 2026 · LÜĞƏT</span><b>03 / 03</b></div><div class="glyph" aria-hidden="true">W</div><h2>Vocabulary Tests</h2><p>İngilis dili söz ehtiyatını inkişaf etdir: mənalar, tərcümə, sinonimlər, antonimlər və qarışıq sınaqlar.</p><div class="features">Müxtəlif çalışma növləri · Təsadüfi suallar</div><a class="open" href="/testler-luget">Sınağa başla ↗</a></article>
+</section>
+<div class="note"><div><strong>Nəticələr necə göndərilir?</strong><br>Testlərdəki əvvəlki FormSubmit mexanizmi saxlanılıb. Göndərişin uğurlu olması e-poçt xidmətinin aktivləşdirilməsindən və internet bağlantısından asılıdır.</div><div><strong>Məlumatlandırma</strong><br>Şagirdin daxil etdiyi ad, soyad və test nəticəsi e-poçt göndərişi üçün üçüncü tərəf FormSubmit xidmətinə ötürülə bilər. E-poçt çatdırılmasını canlı mühitdə yoxlayın.</div></div>
+</main><footer><div class="wrap foot"><span>© <span id="yy"></span> Namiq Bağırlı · Tədris vəsaitləri</span><a href="/">← Ana səhifəyə qayıt</a></div></footer>
+<script>document.getElementById('yy').textContent=new Date().getFullYear();</script>
+</body></html>
