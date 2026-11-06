@@ -24,3 +24,29 @@ window.NB_LEVEL_QUESTIONS=[
 ['She is used to ___ early.','getting up',['get up','got up','gets up'],'Be used to ifadəsində to-dan sonra -ing forması işlənir.',3],
 ['If you had studied, you ___ the exam.','would have passed',['will pass','would pass','had passed'],'Üçüncü tip şərt cümləsində would have + V3 işlənir.',3]
 ].map((q,i)=>({id:'level-'+i,prompt:q[0],answer:q[1],options:[q[1],...q[2]],explanation:q[3],difficulty:q[4],kind:'choice',tag:'Qrammatika',hint:'Düzgün variantı seçin'}));
+
+(()=>{const skills=['present','quantifiers','present','present','vocabulary','vocabulary','past','quantifiers','past','past','conditionals','passive','vocabulary','vocabulary','relative','past','conditionals','past','past','vocabulary','conditionals','relative','vocabulary','conditionals'];const why=[
+['Are cəm və you üçün işlənir; she təkdir.','Am yalnız I ilə işlənir.','Be bu cümlədə şəxsə görə dəyişməlidir.'],
+['Three ilə isim cəmdə olmalıdır.','A tək isim üçündür, üç kitabı bildirmir.','Booking kitablar mənasını vermir.'],
+['I ilə has deyil, have işlənir.','Tək having burada xəbər yaratmır.','Am have düzgün feil quruluşu deyil.'],
+['Does he/she/it ilə işlənir, you ilə deyil.','Like bu mənada Simple köməkçisi do tələb edir.','You ilə is də uyğun deyil; like üçün do lazımdır.'],
+['At konkret saatla işlənə bilər, Monday ilə on lazımdır.','In ay və il kimi vaxtlarla işlənir.','By son müddət bildirə bilər; burada hadisənin günü verilir.'],
+['Than müqayisə tələb edir.','Tallest ən üstün dərəcədir, iki tərəfin müqayisəsi deyil.','Tall qısa sifətdir; taller forması işlənir.'],
+['Yesterday keçmiş zamandır.','They cəmdir; was deyil, were.','Be şəxsə və zamana görə dəyişməlidir.'],
+['Bu neytral inkar cümləsində any gözlənilir.','Milk sayıla bilməyən isimdir; many olmaz.','A tək sayılan isim istəyir.'],
+['For müddəti göstərər: for six years.','During hadisə/dövrün ərzində deməkdir.','Present Perfect başlanğıc nöqtəsi üçün since tələb edir.'],
+['Arrived keçmiş zamanda fon hərəkəti tələb edir.','Has cooked indiki nəticəyə yönəlir.','Is cooking indiki zamandır.'],
+['Would ikinci tip xəyali şərtə uyğun olardı.','Stayed keçmişdir, tomorrow ilə uyğun deyil.','Had stayed keçmişdən əvvəlki zamandır.'],
+['Is send səhvdir: be + V3 lazımdır.','Sent tək məlum növ olardı; burada letter hərəkəti qəbul edir.','Has send səhvdir: V3 lazımdır və yesterday üçün Past Simple seçilir.'],
+['Do not have to zərurətin olmadığını bildirir, qadağanı deyil.','May icazə mənası verə bilər, qadağan deyil.','Could imkanı bildirə bilər, qadağanı yox.'],
+['Enjoy-dan sonra əsas forma yox, -ing işlənir.','Enjoy bu quruluşda to-infinitive götürmür.','Reads şəxsli formadır, enjoy-dan sonra uyğun deyil.'],
+['Which burada insanı bildirmir.','Where yerə aiddir.','Whose mənsubiyyət üçündür və sonra isim tələb edər.'],
+['Yet adətən bu mənada sual və inkarda işlənir.','Since başlanğıc nöqtəsi tələb edir.','Ever təcrübə suallarında işlənə bilər, burada already lazımdır.'],
+['Had more time xəyali indiki haldır; will yox, would.','Learned şərtin əsas hissəsində burada uyğun deyil.','Had learned keçmişdən əvvəlki zamandır.'],
+['Starts indiki zamandır.','Has started indiki nəticəyə yönəlir, arrived-dən əvvəlki hadisəyə deyil.','Was start düzgün quruluş deyil.'],
+['Keçmiş nitqdə will bu nümunədə would olur.','Calls indiki vərdişi bildirər.','Has called next day gələcək niyyətini bildirmir.'],
+['Although-dan sonra şəxsli cümlə lazımdır.','Because-dan sonra da bu quruluşda şəxsli cümlə lazımdır.','Even təkbaşına being tired-i bu cür bağlamır.'],
+['Wish-dən sonra indiki reallıqdan fərqli arzu üçün keçmiş forma seçilir.','Will be gələcək xəbəridir, bu wish quruluşuna uyğun deyil.','Have been bu xəyali indiki halı bildirmir.'],
+['Who insanı bildirir, mənsubiyyəti yox.','Which təkbaşına cover üçün mənsubiyyət yaratmır.','Where yer bildirir, cover mənsubiyyətini yox.'],
+['Be used to ifadəsində to burada sözönüdür; -ing lazımdır.','Got up keçmiş şəxsli formadır.','Gets up da şəxsli indiki formadır.'],
+['Keçmişdə baş verməmiş şərtin nəticəsində will işlənmir.','Would pass ikinci tip şərtə uyğun olardı.','Had passed əsas nəticə hissəsində would have-ı əvəz etmir.']];window.NB_LEVEL_QUESTIONS.forEach((question,i)=>{question.skill=skills[i];question.whyByAnswer=Object.fromEntries(question.options.map((o,j)=>[o,j===0?question.explanation:why[i][j-1]]));});})();
