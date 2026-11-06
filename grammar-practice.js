@@ -1,0 +1,16 @@
+(()=>{const D=window.NB_STUDY_DATA;const mins={present:[5,5,5,5,5],past:[6,7,9,6,7],quantifiers:[5,5,6,7,5],conditionals:[7,8,9,7,8],passive:[7,7,8,9,7],relative:[6,8,6,7,6]};D.grammar.forEach(g=>g.questions.forEach((q,i)=>q.minGrade=mins[g.id][i]));
+const add=(id,min,prompt,options,answer,reason)=>{D.grammar.find(g=>g.id===id).questions.push({prompt,options,answer,skill:id,minGrade:min,supplemental:true,why:options.map(o=>o===answer?'Düzgündür. '+reason:'Bu variant uyğun deyil. '+reason)});};
+add('past',6,'___ you watch the film yesterday?',['Did','Do','Does'],'Did','Yesterday keçmiş vaxtdır. Sual Did + mübtəda + watch formasındadır.');
+add('past',6,'She ___ at home last night.',['was','were','is'],'was','Last night keçmişdir. She ilə to be feilinin keçmiş forması was olur.');
+add('past',6,'My friends ___ football yesterday.',['played','plays','playing'],'played','Yesterday tamamlanmış keçmiş hadisədir: play → played. My friends played football — Dostlarım futbol oynadılar.');
+add('quantifiers',5,'How ___ books are in your bag?',['many','much','any'],'many','Books sayıla bilən cəm isimdir. Sayı soruşmaq üçün how many işlənir.');
+add('quantifiers',5,'There is not ___ milk in the fridge.',['any','many','a'],'any','Milk sayılmayan isimdir. Bu inkar cümləsində any uyğun gəlir: soyuducuda süd yoxdur. Many cəm sayıla bilən isimlə işlənir.');
+add('conditionals',7,'If you study tonight, you ___ ready tomorrow.',['will be','would be','were'],'will be','Sabah üçün real ehtimal var: if + Present Simple, nəticə will + əsas forma. Study → will be.');
+add('conditionals',7,'If you mix red and white paint, you ___ pink.',['get','will got','got'],'get','Ümumi nəticə bildirən sıfırıncı tip: if + Present Simple, Present Simple. Qırmızı və ağ boyanı qarışdıranda çəhrayı alınır.');
+add('conditionals',7,'If the weather ___ nice tomorrow, we will walk to school.',['is','will be','was'],'is','Real gələcək şərtində if hissəsi Present Simple olur: if the weather is nice. Will nəticə hissəsindədir.');
+add('passive',7,'These toys ___ in this factory.',['are made','is made','are make'],'are made','These toys cəmdir: are. Məchul növdə make feilinin V3 forması made lazımdır.');
+add('passive',7,'The letter ___ by Aysel yesterday.',['was written','were written','was wrote'],'was written','Letter təkdir və yesterday keçmişdir: was. Write feilinin üçüncü forması written-dir.');
+add('relative',6,'I have a friend ___ lives in Ganja.',['who','which','what'],'who','Friend insanı bildirir. Who lives in Ganja — Gəncədə yaşayan. Who həmin şəxsi izah edir.');
+add('relative',6,'The pencil ___ is on the desk is mine.',['which','who','what'],'which','Pencil əşyadır. Which is on the desk — partanın üstündə olan. Who insan üçün işlənir.');
+window.NBGrammarQuestions=(lesson,grade)=>lesson.questions.filter(q=>q.minGrade<=grade).sort((a,b)=>Number(!!a.supplemental)-Number(!!b.supplemental)).slice(0,5);
+})();
