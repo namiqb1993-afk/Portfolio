@@ -9,25 +9,21 @@
 <meta property="og:description" content="Practice English vocabulary for grades 1–5 with interactive quizzes, pronunciation audio, and Azerbaijani translations.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=Charis+SIL:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: one centred "index card" column on a ruled-notebook ground; letter-tab chips echo the book's A–Z edge tabs */
-:root{
-  --paper:#f6f8fc; --card:#ffffff; --ink:#1d2340; --muted:#5d6488; --line:#dfe4f2;
-  --accent:#ef5b3b; --accent-ink:#ffffff; --blue:#2f6fde; --good:#1f9d55; --good-bg:#e5f6ec; --bad:#d63a3a; --bad-bg:#fdeaea;
-  --chip:#eef1fa; --shadow:0 1px 2px rgba(29,35,64,.06),0 8px 24px rgba(29,35,64,.08);
-  --f-display:"Baloo 2","Nunito",system-ui,sans-serif; --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif; --f-ipa:"Charis SIL","Noto Serif","Times New Roman",serif;
-  --t1:#ef5b3b;--t2:#f29d1b;--t3:#2fa86a;--t4:#18a2b8;--t5:#2f6fde;--t6:#7b55d6;--t7:#d6478f;--t8:#6c7a3a;
+:root {
+  color-scheme: dark;
+  --paper:#111814; --card:#1a251d; --ink:#edf2e8; --muted:#aab8aa; --line:#ffffff20;
+  --accent:#c9f48c; --accent-ink:#20301a; --blue:var(--accent);
+  --good:#c9f48c; --good-bg:#253623; --bad:#ffaaa4; --bad-bg:#422928;
+  --chip:#24332a; --shadow:none;
+  --f-body:Manrope,Arial,sans-serif; --f-display:var(--f-body); --f-ipa:var(--f-body);
+  --t1:var(--accent); --t2:var(--accent); --t3:var(--accent); --t4:var(--accent);
+  --t5:var(--accent); --t6:var(--accent); --t7:var(--accent); --t8:var(--accent);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#12152a; --card:#1b1f3a; --ink:#eef0fb; --muted:#a3a9cc; --line:#2c3157; --accent:#ff7a5c; --accent-ink:#1b1f3a; --blue:#7aa6ff;
-  --good:#4fd18b; --good-bg:#16352a; --bad:#ff7676; --bad-bg:#3d1c25; --chip:#252a4c; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#12152a; --card:#1b1f3a; --ink:#eef0fb; --muted:#a3a9cc; --line:#2c3157; --accent:#ff7a5c; --accent-ink:#1b1f3a; --blue:#7aa6ff;
-  --good:#4fd18b; --good-bg:#16352a; --bad:#ff7676; --bad-bg:#3d1c25; --chip:#252a4c; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 34px;}
+  margin:0;}
 .wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:18px}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px}
@@ -122,6 +118,31 @@ input[type=text]:focus{outline:none;border-color:var(--blue)}
 .miss b{color:var(--good)}
 .foot{color:var(--muted);font-size:12.5px;text-align:center}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+a, button { touch-action: manipulation; }
+.back-link { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); font-size:13px; font-weight:700; text-decoration:none; }
+.back-link:hover { color:var(--accent); }
+.back-link:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.mark { background:var(--chip); border:1px solid var(--line); color:var(--accent); }
+.card { border-radius:16px; }
+.btn, .opt, .tab, .pcell, .mi, input[type=text] { border-radius:8px; }
+.opt, .tab, .pcell, .mi, input[type=text] { border-width:1px; }
+.btn.ghost { background:transparent; border:1px solid #ffffff35; }
+.btn.primary:hover:not(:disabled) { background:#d8ffa6; }
+.opt:hover:not(:disabled), .tab:hover { background:var(--chip); border-color:var(--accent); }
+.tab:hover { transform:none; }
+.tab[aria-pressed=true] { background:#c9f48c19; }
+.tab::before { display:none; }
+.tab b, .tab span { padding-left:0; }
+.snd { color:var(--accent-ink); }
+.bar { height:5px; }
+.brand h1 { font-size:clamp(23px,4vw,28px); letter-spacing:-.5px; line-height:1.25; }
+.big { font-size:clamp(29px,5vw,38px); letter-spacing:-.7px; }
+.cert .grade { color:var(--ink); }
+@media (prefers-reduced-motion:reduce) {
+  .bar i, .tab { transition:none; }
+  .snd.playing, .spin { animation:none; }
+}
 </style>
 <style>html{color-scheme:light}@media (prefers-color-scheme:dark){html{color-scheme:dark}}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head><body>
@@ -129,9 +150,9 @@ input[type=text]:focus{outline:none;border-color:var(--blue)}
 
 
 <div class="wrap">
-  <nav aria-label="Tədris naviqasiyası"><a class="btn ghost" href="/testler">← Tədrisə qayıt</a></nav>
+  <nav aria-label="Tədris naviqasiyası"><a class="back-link" href="/testler">← Tədrisə qayıt</a></nav>
   <header class="top">
-    <div class="brand"><div class="mark" aria-hidden="true">Aa</div><div><h1>Söz oyunları</h1><small>Namiq Bağırlı · English Vocabulary 1–5</small></div></div>
+    <div class="brand"><div class="mark" aria-hidden="true">nb.</div><div><h1>Söz oyunları</h1><small>Namiq Bağırlı · English Vocabulary 1–5</small></div></div>
     <span class="pill" id="wc">640 söz</span>
   </header>
   <main id="app"></main>
@@ -338,7 +359,7 @@ function run(st){
   });
 }
 function runMatch(st,q){
-  const colors=['#2f6fde','#ef5b3b','#2fa86a','#7b55d6','#d6478f'];
+  const colors=['#49604a','#536749','#315e4b','#47534d','#675a40'];
   const pairs={};let sel=null;
   app.innerHTML=`<section class="card sect">${head(st)}
     <div><div class="qtype" style="--tc:var(${TC[st.g]})">${TYPES.match.lab}</div><p class="qtext">${q.prompt}</p></div>
@@ -378,7 +399,7 @@ function saveResult(st, pct, dt) {
 }
 function result(st){
   const pct=Math.round(st.score/st.max*100);
-  const [gr,lab,col]=pct>=85?[5,'Əla!','#1f9d55']:pct>=65?[4,'Yaxşı!','#2f6fde']:pct>=45?[3,'Kafi','#f29d1b']:[2,'Yenidən cəhd et','#d63a3a'];
+  const [gr,lab,col]=pct>=85?[5,'Əla!','#315e4b']:pct>=65?[4,'Yaxşı!','#49604a']:pct>=45?[3,'Kafi','#675a40']:[2,'Yenidən cəhd et','#643d3a'];
   const now=new Date();const dt=now.toLocaleDateString('az-AZ',{day:'2-digit',month:'2-digit',year:'numeric'})+' · '+now.toLocaleTimeString('az-AZ',{hour:'2-digit',minute:'2-digit'});
   const saved = saveResult(st, pct, dt);
   const order=['en','az','spell','pron','listen','ipa','syn','ant','gap','match'];
